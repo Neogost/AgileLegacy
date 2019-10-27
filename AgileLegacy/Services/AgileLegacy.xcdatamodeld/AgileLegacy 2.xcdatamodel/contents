@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14903" systemVersion="18F132" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Material" representedClassName="Material" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Workshop" representedClassName="Workshop" syncable="YES">
+        <attribute name="archived" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="detail" optional="YES" attributeType="String"/>
+        <attribute name="difficulty" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="durationMax" optional="YES" attributeType="Integer 16" minValueString="0" maxValueString="999" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="durationMin" optional="YES" attributeType="Integer 16" minValueString="0" maxValueString="999" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="nbPeopleMax" optional="YES" attributeType="Integer 16" minValueString="0" maxValueString="99" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="nbPeopleMin" optional="YES" attributeType="Integer 16" minValueString="0" maxValueString="99" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="resume" optional="YES" attributeType="String"/>
+        <attribute name="source" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <relationship name="materialList" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Material"/>
+    </entity>
+    <elements>
+        <element name="Material" positionX="-69.8046875" positionY="168.51953125" width="128" height="73"/>
+        <element name="Workshop" positionX="-408.859375" positionY="128.109375" width="128" height="238"/>
+    </elements>
+</model>

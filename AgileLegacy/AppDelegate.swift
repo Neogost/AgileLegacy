@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        preloadedData()
         return true
     }
 
@@ -41,53 +41,116 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
-        self.saveContext()
+        PersistanceService.saveContext()
     }
 
-    // MARK: - Core Data stack
-
-    lazy var persistentContainer: NSPersistentContainer = {
-        /*
-         The persistent container for the application. This implementation
-         creates and returns a container, having loaded the store for the
-         application to it. This property is optional since there are legitimate
-         error conditions that could cause the creation of the store to fail.
-        */
-        let container = NSPersistentContainer(name: "AgileLegacy")
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            if let error = error as NSError? {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                 
-                /*
-                 Typical reasons for an error here include:
-                 * The parent directory does not exist, cannot be created, or disallows writing.
-                 * The persistent store is not accessible, due to permissions or data protection when the device is locked.
-                 * The device is out of space.
-                 * The store could not be migrated to the current model version.
-                 Check the error message to determine what the actual problem was.
-                 */
-                fatalError("Unresolved error \(error), \(error.userInfo)")
+    /// Permet de chargé les données par défaut de l'application au premier lancement de celle-ci.
+    /// Met a jour le paramettre `didPreloadData` pour savoir si les données doivent être réinjecté.
+    private func preloadedData() {
+        
+        // Définition du paramettre
+        let preloadedDataKey = "didPreloadData"
+        
+        // Récupération des données de l'utilisateur par rapport à l'application
+        let userDefaults = UserDefaults.standard
+        
+        // Si les données ne sont pas encore initialisé
+        if userDefaults.bool(forKey: preloadedDataKey) == false {
+            
+            // Récupération des données à chargé dans le fichier des data preloadedData.plist
+            guard let urlPath = Bundle.main.url(forResource: "preloadedData", withExtension: "plist") else {
+                return
             }
-        })
-        return container
-    }()
-
-    // MARK: - Core Data Saving support
-
-    func saveContext () {
-        let context = persistentContainer.viewContext
-        if context.hasChanges {
-            do {
-                try context.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            
+            // Récupération du service de persistance.
+            let backgroundContext = PersistanceService.persistentContainer.newBackgroundContext()
+            PersistanceService.persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
+            
+            backgroundContext.perform {
+                
+                // récupération des données dans le fichier .plist
+                // Extraction des objets métiers
+                if let datas = NSArray(contentsOf: urlPath) as? [Dictionary<String,String>] {
+                    
+                    do {
+                        for workshopList in datas {
+                            let workshopObject = Workshop(context: backgroundContext)
+                            for (key,value) in workshopList {
+                                
+                                switch(key) {
+                                case "id":
+                                   workshopObject.id = UUID(uuidString: value)
+                                    break
+                                
+                                case "nbPeopleMax":
+                                    workshopObject.nbPeopleMax = Int16(value)!
+                                    break;
+                                case "nbPeopleMin":
+                                    workshopObject.nbPeopleMin = Int16(value)!
+                                    break;
+                                case "title":
+                                    workshopObject.title = value
+                                    break
+                                case "resume":
+                                    workshopObject.resume = value
+                                    break
+                                case "detail":
+                                    workshopObject.detail = value
+                                    break
+                                case "source":
+                                    workshopObject.source = value
+                                    break
+                                case "durationMax":
+                                    workshopObject.durationMax = Int16(value)!
+                                    break
+                                case "durationMin":
+                                    workshopObject.durationMin = Int16(value)!
+                                    break
+                                case "type":
+                                    workshopObject.type = value
+                                    break
+                                case "archived":
+                                    workshopObject.archived = value.bool!
+                                    break
+                                case "difficulty":
+                                    workshopObject.difficulty = Int16(value)!
+                                    break
+                                default:
+                                    break
+                                }
+                            }
+                        }
+                        
+                        // Sauvegarde
+                        try backgroundContext.save()
+                        print("DATA AS BEEN ADDED TO THE BDD OF THE APPLICATION")
+                        
+                        // Mise à jour du paramettre de préchargement des données à true
+                        userDefaults.set(true, forKey: preloadedDataKey)
+                    } catch {
+                        print("Error : " + error.localizedDescription)
+                    }
+                    
+                }
             }
+            
+        } else {
+            print("DATA IS ALREADY BEEN IMPORTED THERE IS NOTHING MORE TO DO HERE.")
         }
     }
-
+    
 }
 
+
+extension String {
+    var bool: Bool? {
+        switch self.lowercased() {
+        case "true", "t", "yes", "y", "1":
+            return true
+        case "false", "f", "no", "n", "0":
+            return false
+        default:
+            return nil
+        }
+    }
+}
