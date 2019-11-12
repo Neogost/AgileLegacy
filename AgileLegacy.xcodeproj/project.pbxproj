@@ -18,12 +18,15 @@
 		F11F729F232D917600F11B46 /* ListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11F729E232D917600F11B46 /* ListScreen.swift */; };
 		F11F72A1232D91C900F11B46 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11F72A0232D91C900F11B46 /* Extension.swift */; };
 		F11F72AB232DA00100F11B46 /* PersistanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11F72AA232DA00100F11B46 /* PersistanceService.swift */; };
+		F1209A8D2340AFD0004E09C3 /* AProposScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1209A8C2340AFD0004E09C3 /* AProposScreen.swift */; };
 		F13B8D4A2332CB00000EA7EF /* Workshop+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13B8D462332CB00000EA7EF /* Workshop+CoreDataClass.swift */; };
 		F13B8D4B2332CB00000EA7EF /* Workshop+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13B8D472332CB00000EA7EF /* Workshop+CoreDataProperties.swift */; };
 		F13B8D4C2332CB00000EA7EF /* Material+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13B8D482332CB00000EA7EF /* Material+CoreDataClass.swift */; };
 		F13B8D4D2332CB00000EA7EF /* Material+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13B8D492332CB00000EA7EF /* Material+CoreDataProperties.swift */; };
+		F173F3B92365C2CB003D8E24 /* preloadedData.plist in Resources */ = {isa = PBXBuildFile; fileRef = F173F3B82365C2CB003D8E24 /* preloadedData.plist */; };
+		F173F3BB2365C810003D8E24 /* SettingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F173F3BA2365C810003D8E24 /* SettingScreen.swift */; };
+		F173F3BD2365DE45003D8E24 /* ContactScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F173F3BC2365DE45003D8E24 /* ContactScreen.swift */; };
 		F1C208E223341B8A00D1B417 /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C208E123341B8A00D1B417 /* DetailScreen.swift */; };
-		F1FD540123365FFA00B803EC /* preloadedData.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1FD540023365FFA00B803EC /* preloadedData.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,13 +64,16 @@
 		F11F729E232D917600F11B46 /* ListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScreen.swift; sourceTree = "<group>"; };
 		F11F72A0232D91C900F11B46 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		F11F72AA232DA00100F11B46 /* PersistanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceService.swift; sourceTree = "<group>"; };
+		F1209A8C2340AFD0004E09C3 /* AProposScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AProposScreen.swift; sourceTree = "<group>"; };
 		F1354E27233290E2004BF818 /* AgileLegacy 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "AgileLegacy 2.xcdatamodel"; sourceTree = "<group>"; };
 		F13B8D462332CB00000EA7EF /* Workshop+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workshop+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F13B8D472332CB00000EA7EF /* Workshop+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workshop+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F13B8D482332CB00000EA7EF /* Material+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Material+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F13B8D492332CB00000EA7EF /* Material+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Material+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F173F3B82365C2CB003D8E24 /* preloadedData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = preloadedData.plist; sourceTree = "<group>"; };
+		F173F3BA2365C810003D8E24 /* SettingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingScreen.swift; sourceTree = "<group>"; };
+		F173F3BC2365DE45003D8E24 /* ContactScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactScreen.swift; sourceTree = "<group>"; };
 		F1C208E123341B8A00D1B417 /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
-		F1FD540023365FFA00B803EC /* preloadedData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = preloadedData.plist; path = ../../../../../Downloads/preloadedData.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,14 +101,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F1161A8F232E9D2400E74281 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				F1FD540023365FFA00B803EC /* preloadedData.plist */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
 		F11F7260232D90DB00F11B46 = {
 			isa = PBXGroup;
 			children = (
@@ -126,9 +124,9 @@
 		F11F726B232D90DB00F11B46 /* AgileLegacy */ = {
 			isa = PBXGroup;
 			children = (
+				F173F3B72365C2A1003D8E24 /* PreLoaded */,
 				F11F726C232D90DB00F11B46 /* AppDelegate.swift */,
 				F11F7270232D90DB00F11B46 /* Main.storyboard */,
-				F1161A8F232E9D2400E74281 /* Data */,
 				F11F72A9232D9FF300F11B46 /* Services */,
 				F11F729D232D912000F11B46 /* viewController */,
 				F11F72A8232D9FA600F11B46 /* Entity */,
@@ -164,6 +162,9 @@
 				F11F726E232D90DB00F11B46 /* mainScreen.swift */,
 				F11F729E232D917600F11B46 /* ListScreen.swift */,
 				F1C208E123341B8A00D1B417 /* DetailScreen.swift */,
+				F1209A8C2340AFD0004E09C3 /* AProposScreen.swift */,
+				F173F3BA2365C810003D8E24 /* SettingScreen.swift */,
+				F173F3BC2365DE45003D8E24 /* ContactScreen.swift */,
 			);
 			path = viewController;
 			sourceTree = "<group>";
@@ -186,6 +187,14 @@
 				F11F72AA232DA00100F11B46 /* PersistanceService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		F173F3B72365C2A1003D8E24 /* PreLoaded */ = {
+			isa = PBXGroup;
+			children = (
+				F173F3B82365C2CB003D8E24 /* preloadedData.plist */,
+			);
+			path = PreLoaded;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,8 +303,8 @@
 			files = (
 				F11F727A232D90DD00F11B46 /* LaunchScreen.storyboard in Resources */,
 				F11F7277232D90DD00F11B46 /* Assets.xcassets in Resources */,
-				F1FD540123365FFA00B803EC /* preloadedData.plist in Resources */,
 				F11F7272232D90DB00F11B46 /* Main.storyboard in Resources */,
+				F173F3B92365C2CB003D8E24 /* preloadedData.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,12 +329,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1209A8D2340AFD0004E09C3 /* AProposScreen.swift in Sources */,
 				F13B8D4D2332CB00000EA7EF /* Material+CoreDataProperties.swift in Sources */,
 				F11F72A1232D91C900F11B46 /* Extension.swift in Sources */,
 				F11F7275232D90DB00F11B46 /* AgileLegacy.xcdatamodeld in Sources */,
+				F173F3BD2365DE45003D8E24 /* ContactScreen.swift in Sources */,
 				F11F726F232D90DB00F11B46 /* mainScreen.swift in Sources */,
 				F11F726D232D90DB00F11B46 /* AppDelegate.swift in Sources */,
 				F13B8D4B2332CB00000EA7EF /* Workshop+CoreDataProperties.swift in Sources */,
+				F173F3BB2365C810003D8E24 /* SettingScreen.swift in Sources */,
 				F13B8D4C2332CB00000EA7EF /* Material+CoreDataClass.swift in Sources */,
 				F1C208E223341B8A00D1B417 /* DetailScreen.swift in Sources */,
 				F11F72AB232DA00100F11B46 /* PersistanceService.swift in Sources */,

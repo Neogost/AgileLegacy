@@ -32,10 +32,13 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5ya-yn-g87">
                                 <rect key="frame" x="20" y="59" width="374" height="509"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <string key="text">Je suis Kevin Desmay, passionné par la culture Agile. Je vous propose au travers de cette application un panel d'atelier permettant d'organiser vos réunions sous un format ludique.
+                                <mutableString key="text">Je suis Kevin Desmay, passionné par la culture Agile. Je vous propose au travers de cette application un panel d'atelier permettant d'organiser vos réunions sous un format ludique.
 Qui a dit que le jeu et une activité ludique sont incompatibles au monde professionnel ?
 Au travers de ses ateliers, venant du monde entier, vous pouvez découvrir ou redécouvrir des classiques d'animation Agile.
-Cette application a pour but de vivre et de grandir, vous êtes tous invité à proposer vos avis, vos ateliers afin de les partager à l'ensemble de la communauté. Vous pouvez consulter mon avancement sur mon trello AgileLegacy.</string>
+Cette application a pour but de vivre et de grandir, vous êtes tous invité à proposer vos avis, vos ateliers afin de les partager à l'ensemble de la communauté. Vous pouvez consulter mon avancement sur mon trello AgileLegacy.
+
+
+Un grand merci au site icones8.fr qui me permet d'utiliser un de leur icones en attendant l'officiel ! :)</mutableString>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -77,7 +80,171 @@ Cette application a pour but de vivre et de grandir, vous êtes tous invité à 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tuf-NZ-cII" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-78.260869565217391" y="-693.75"/>
+            <point key="canvasLocation" x="687" y="-1961"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="LQo-xu-v7S">
+            <objects>
+                <tableViewController title="Settings" id="qRS-Bd-f2j" customClass="SettingScreen" customModule="AgileLegacy" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mzN-Gf-Ets">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Application" id="iLv-nH-jCs">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="S1A-U7-z57" style="IBUITableViewCellStyleDefault" id="Vtb-zd-C9r">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vtb-zd-C9r" id="EIa-pq-LMv">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="A Propos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S1A-U7-z57">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.666667938232422"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="ZiY-yo-MYQ" kind="show" id="TOv-Iq-cbN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="BTx-oq-Cxg" style="IBUITableViewCellStyleDefault" id="tJ0-mT-AYd">
+                                        <rect key="frame" x="0.0" y="71.666667938232422" width="414" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tJ0-mT-AYd" id="NXn-O4-OOF">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BTx-oq-Cxg">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.666667938232422"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="iIR-F8-pEp" kind="show" id="mIm-OI-Bxa"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Atelier" id="eFR-J4-7Ln">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="bP1-zK-l81" style="IBUITableViewCellStyleDefault" id="QCK-eC-Wec">
+                                        <rect key="frame" x="0.0" y="171.33333587646484" width="414" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QCK-eC-Wec" id="C8t-Yp-f8B">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Rechercher un Atelier" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bP1-zK-l81">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.666667938232422"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="CPg-f4-mUz" style="IBUITableViewCellStyleDefault" id="Oap-IM-5PQ">
+                                        <rect key="frame" x="0.0" y="215.00000381469727" width="414" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Oap-IM-5PQ" id="eUn-Ln-QSX">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Soumettre un Atelier" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CPg-f4-mUz">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.666667938232422"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="qRS-Bd-f2j" id="xlC-rf-DTK"/>
+                            <outlet property="delegate" destination="qRS-Bd-f2j" id="alG-iJ-Pal"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="uU3-tF-25y"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WfL-HQ-iIA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-78" y="-1261"/>
+        </scene>
+        <!--Contact-->
+        <scene sceneID="sLe-Yb-X5d">
+            <objects>
+                <viewController title="Contact" id="iIR-F8-pEp" customClass="ContactScreen" customModule="AgileLegacy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kLY-ca-10s">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Object" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iSP-eB-DO3">
+                                <rect key="frame" x="20" y="64" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="c0K-zy-fQP">
+                                <rect key="frame" x="20" y="108" width="374" height="482"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="482" id="lr1-pe-AeG"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Yb-t1-m8r">
+                                <rect key="frame" x="80" y="610" width="254" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="jWa-Qr-IMT"/>
+                                </constraints>
+                                <state key="normal" title="ENVOYER">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSendEmail:" destination="iIR-F8-pEp" eventType="touchUpInside" id="WRo-zJ-rNk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Yb-t1-m8r" firstAttribute="top" secondItem="c0K-zy-fQP" secondAttribute="bottom" constant="20" id="B9c-qc-Ozd"/>
+                            <constraint firstItem="gka-aZ-gRC" firstAttribute="trailing" secondItem="iSP-eB-DO3" secondAttribute="trailing" constant="20" id="NhW-nq-NMO"/>
+                            <constraint firstItem="c0K-zy-fQP" firstAttribute="top" secondItem="iSP-eB-DO3" secondAttribute="bottom" constant="10" id="OF5-M1-ZVF"/>
+                            <constraint firstItem="iSP-eB-DO3" firstAttribute="top" secondItem="gka-aZ-gRC" secondAttribute="top" constant="20" id="OUl-p8-X7H"/>
+                            <constraint firstItem="gka-aZ-gRC" firstAttribute="trailing" secondItem="6Yb-t1-m8r" secondAttribute="trailing" constant="80" id="WbY-ki-VZQ"/>
+                            <constraint firstItem="6Yb-t1-m8r" firstAttribute="leading" secondItem="gka-aZ-gRC" secondAttribute="leading" constant="80" id="Y1D-jC-FZt"/>
+                            <constraint firstItem="c0K-zy-fQP" firstAttribute="leading" secondItem="gka-aZ-gRC" secondAttribute="leading" constant="20" id="e4q-qs-QMv"/>
+                            <constraint firstItem="iSP-eB-DO3" firstAttribute="leading" secondItem="gka-aZ-gRC" secondAttribute="leading" constant="20" id="gKE-2N-XdC"/>
+                            <constraint firstItem="gka-aZ-gRC" firstAttribute="trailing" secondItem="c0K-zy-fQP" secondAttribute="trailing" constant="20" id="wnz-c7-QjX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gka-aZ-gRC"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GMr-KS-dA1"/>
+                    <connections>
+                        <outlet property="tfObject" destination="iSP-eB-DO3" id="qEC-VO-BO1"/>
+                        <outlet property="tvContent" destination="c0K-zy-fQP" id="VY8-ry-JEw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RPU-HW-OLH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="686.95652173913049" y="-1261.1413043478262"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="F3e-Ow-Bwd">
@@ -249,7 +416,7 @@ Cette application a pour but de vivre et de grandir, vous êtes tous invité à 
                     <navigationItem key="navigationItem" title="Accueil" id="oiD-E7-iz3">
                         <barButtonItem key="leftBarButtonItem" title="Profil" image="gear" catalog="system" landscapeImage="gear" id="9tH-Wq-nIx">
                             <connections>
-                                <segue destination="ZiY-yo-MYQ" kind="show" identifier="apropos" id="6pl-tL-cEq"/>
+                                <segue destination="qRS-Bd-f2j" kind="show" id="BdY-x3-lvH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

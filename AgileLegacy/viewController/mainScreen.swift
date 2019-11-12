@@ -89,11 +89,10 @@ class mainScreen: UIViewController {
             listScreen.call(title: "Liste des Atelier de Collecte", type: "collect", color: UIColor.collectColor)
             break
         case "profil":
-            let aProposScreen = segue.destination as! AProposScreen
-            aProposScreen.call()
+            let settingScreen = segue.destination as! SettingScreen
+            settingScreen.call()
             break
         default:
-            print("ERROR DURING CALL TO LISTSCREEN")
             break
         }
     }
