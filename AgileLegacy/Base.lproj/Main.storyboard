@@ -538,15 +538,15 @@ Un grand merci au site icones8.fr qui me permet d'utiliser un de leur icones en 
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="clB-CH-i1q">
-                                <rect key="frame" x="162" y="73.333333333333329" width="22" height="20.666666666666671"/>
+                                <rect key="frame" x="162" y="73.333333333333329" width="22" height="20"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0wC-lw-Ukh">
-                                <rect key="frame" x="194.66666666666666" y="73.333333333333329" width="22" height="20.666666666666671"/>
+                                <rect key="frame" x="194.66666666666666" y="73.333333333333329" width="22" height="20"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vBP-Vj-GVL">
-                                <rect key="frame" x="227" y="72.333333333333329" width="22" height="22.666666666666671"/>
+                                <rect key="frame" x="227" y="72.333333333333329" width="22" height="22"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>
