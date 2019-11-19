@@ -20,42 +20,42 @@ extension UIColor {
     /// Défini la valeur Hexadécimal de la couleur associé à la génération d'idée. Cette couleur
     /// est utilisé afin de garder une cohérence entre les différentes vue et teinte de couleur
     /// dans l'application
-    static let ideaColor = UIColor().colorFromHex(hex:"FF40FF")
+    static let ideaColor = UIColor().colorFromHex(hex:"E498AF")
     
     
     /// Défini la valeur Hexadécimal de la couleur associé à la résolution de partage d'une idée . Cette couleur
     /// est utilisé afin de garder une cohérence entre les différentes vue et teinte de couleur
     /// dans l'application
-    static let shareColor = UIColor().colorFromHex(hex:"FF2600")
+    static let shareColor = UIColor().colorFromHex(hex:"FF7C64")
     
     /// Défini la valeur Hexadécimal de la couleur associé à la résolution de problème. Cette couleur
     /// est utilisé afin de garder une cohérence entre les différentes vue et teinte de couleur
     /// dans l'application
-    static let problemColor = UIColor().colorFromHex(hex:"942192")
+    static let problemColor = UIColor().colorFromHex(hex:"8E79AD")
     
     
     /// Défini la valeur Hexadécimal de la couleur associé à la prise de décision. Cette couleur
     /// est utilisé afin de garder une cohérence entre les différentes vue et teinte de couleur
     /// dans l'application
-    static let decisionColor = UIColor().colorFromHex(hex:"00F900")
+    static let decisionColor = UIColor().colorFromHex(hex:"5BDB5B")
     
     
     /// Défini la valeur Hexadécimal de la couleur associé à la phase de retrospective. Cette couleur
     /// est utilisé afin de garder une cohérence entre les différentes vue et teinte de couleur
     /// dans l'application
-    static let retrospectiveColor = UIColor().colorFromHex(hex:"FF9300")
+    static let retrospectiveColor = UIColor().colorFromHex(hex:"FFAC39")
     
     
     /// Défini la valeur Hexadécimal de la couleur associé à la phase de retrospective. Cette couleur
     /// est utilisé afin de garder une cohérence entre les différentes vue et teinte de couleur
     /// dans l'application
-    static let closeColor = UIColor().colorFromHex(hex:"AA7942")
+    static let closeColor = UIColor().colorFromHex(hex:"CFA270")
     
     
     /// Défini la valeur Hexadécimal de la couleur associé à la phase de retrospective. Cette couleur
     /// est utilisé afin de garder une cohérence entre les différentes vue et teinte de couleur
     /// dans l'application
-    static let collectColor = UIColor().colorFromHex(hex:"0433FF")
+    static let collectColor = UIColor().colorFromHex(hex:"0E8AE9")
     
     
     /// Méthode permettant de convertire une valeur hexadécimal en couleur RGB.
