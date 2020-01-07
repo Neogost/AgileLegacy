@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KY3-2i-PTs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KY3-2i-PTs">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -549,6 +549,18 @@ Un grand merci au site icones8.fr qui me permet d'utiliser un de leur icones en 
                                 <rect key="frame" x="227" y="72.333333333333329" width="22" height="22"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwe-k6-q9F">
+                                <rect key="frame" x="31" y="651" width="27" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="27" id="fw7-GQ-Enz"/>
+                                    <constraint firstAttribute="height" constant="26" id="mqf-5L-HKQ"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="paintbrush.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="showMaterialPopup:" destination="rVy-FV-j47" eventType="touchUpInside" id="aW1-aG-TL5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -561,8 +573,10 @@ Un grand merci au site icones8.fr qui me permet d'utiliser un de leur icones en 
                             <constraint firstItem="Ryz-6l-xrR" firstAttribute="leading" secondItem="VeD-YC-xeh" secondAttribute="leading" constant="20" id="AyC-dm-vCX"/>
                             <constraint firstItem="nh8-21-YIp" firstAttribute="leading" secondItem="OzE-SV-Y9a" secondAttribute="trailing" constant="5" id="FbE-ND-URJ"/>
                             <constraint firstItem="t3j-xN-NxT" firstAttribute="leading" secondItem="71c-Ha-aTv" secondAttribute="trailing" constant="8" id="FyU-4Z-ffK"/>
+                            <constraint firstItem="Vwe-k6-q9F" firstAttribute="leading" secondItem="VeD-YC-xeh" secondAttribute="leading" constant="31" id="JhU-iO-TSg"/>
                             <constraint firstItem="71c-Ha-aTv" firstAttribute="top" secondItem="Ryz-6l-xrR" secondAttribute="bottom" constant="20" id="LdA-E1-9ko"/>
                             <constraint firstItem="OzE-SV-Y9a" firstAttribute="leading" secondItem="VeD-YC-xeh" secondAttribute="leading" constant="20" id="MdX-6J-Exg"/>
+                            <constraint firstItem="RK0-yl-r6i" firstAttribute="top" secondItem="Vwe-k6-q9F" secondAttribute="bottom" constant="36" id="NP2-PU-lbj"/>
                             <constraint firstItem="vBP-Vj-GVL" firstAttribute="centerY" secondItem="clB-CH-i1q" secondAttribute="centerY" id="NwT-4A-j8Z"/>
                             <constraint firstItem="sDC-gg-96K" firstAttribute="top" secondItem="t3j-xN-NxT" secondAttribute="bottom" constant="20" id="O5q-in-wDV"/>
                             <constraint firstItem="t3j-xN-NxT" firstAttribute="top" secondItem="Ryz-6l-xrR" secondAttribute="bottom" constant="20" id="X7n-ft-4Dn"/>
@@ -572,6 +586,7 @@ Un grand merci au site icones8.fr qui me permet d'utiliser un de leur icones en 
                             <constraint firstItem="sDC-gg-96K" firstAttribute="top" secondItem="nh8-21-YIp" secondAttribute="bottom" constant="20" id="hlk-3c-zk5"/>
                             <constraint firstItem="0wC-lw-Ukh" firstAttribute="centerY" secondItem="clB-CH-i1q" secondAttribute="centerY" id="iBh-Oo-enO"/>
                             <constraint firstItem="VeD-YC-xeh" firstAttribute="trailing" secondItem="Ryz-6l-xrR" secondAttribute="trailing" constant="20" id="jtf-bu-oVd"/>
+                            <constraint firstItem="Vwe-k6-q9F" firstAttribute="top" secondItem="sDC-gg-96K" secondAttribute="bottom" constant="8" id="o6V-iz-DBq"/>
                             <constraint firstItem="RK0-yl-r6i" firstAttribute="top" secondItem="sDC-gg-96K" secondAttribute="bottom" constant="70" id="pni-Mr-KEQ"/>
                             <constraint firstItem="clB-CH-i1q" firstAttribute="top" secondItem="Ryz-6l-xrR" secondAttribute="bottom" constant="18" id="pqf-KM-XFb"/>
                             <constraint firstItem="clB-CH-i1q" firstAttribute="leading" secondItem="nh8-21-YIp" secondAttribute="trailing" constant="63" id="rYi-Ir-kuF"/>
@@ -595,14 +610,70 @@ Un grand merci au site icones8.fr qui me permet d'utiliser un de leur icones en 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GV1-pd-CXO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="686.95652173913049" y="-23.4375"/>
+            <point key="canvasLocation" x="686.95652173913049" y="-23.64130434782609"/>
+        </scene>
+        <!--Material Popup-->
+        <scene sceneID="83h-Qf-HAa">
+            <objects>
+                <viewController storyboardIdentifier="materialPopupScreen" title="Material Popup" id="APF-CO-Ted" customClass="MaterialPopupScreen" customModule="AgileLegacy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xdv-0d-phO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5AT-gp-s2b">
+                                <rect key="frame" x="43" y="483" width="328" height="147"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LfP-gm-jHs">
+                                        <rect key="frame" x="302.66666666666669" y="11.999999999999979" width="17.333333333333314" height="18"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" backgroundImage="xmark" catalog="system"/>
+                                        <connections>
+                                            <action selector="closePopup:" destination="APF-CO-Ted" eventType="touchUpInside" id="IKF-Cx-ibZ"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Liste du matériel" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGu-sQ-88c">
+                                        <rect key="frame" x="8" y="9" width="287" height="130"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="LfP-gm-jHs" firstAttribute="leading" secondItem="rGu-sQ-88c" secondAttribute="trailing" constant="7.6699999999999999" id="8M5-jQ-33z"/>
+                                    <constraint firstAttribute="bottom" secondItem="rGu-sQ-88c" secondAttribute="bottom" constant="8" id="Tln-Hh-Br3"/>
+                                    <constraint firstItem="rGu-sQ-88c" firstAttribute="leading" secondItem="5AT-gp-s2b" secondAttribute="leading" constant="8" id="aKW-m2-rGv"/>
+                                    <constraint firstItem="LfP-gm-jHs" firstAttribute="top" secondItem="5AT-gp-s2b" secondAttribute="top" constant="9.3300000000000001" id="e7R-vk-ae6"/>
+                                    <constraint firstAttribute="trailing" secondItem="LfP-gm-jHs" secondAttribute="trailing" constant="8" id="u55-db-oD7"/>
+                                    <constraint firstItem="rGu-sQ-88c" firstAttribute="top" secondItem="5AT-gp-s2b" secondAttribute="top" constant="9" id="y27-95-FoU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5AT-gp-s2b" firstAttribute="centerX" secondItem="Xdv-0d-phO" secondAttribute="centerX" id="4Ur-De-jsv"/>
+                            <constraint firstItem="5AT-gp-s2b" firstAttribute="centerY" secondItem="Xdv-0d-phO" secondAttribute="centerY" id="DRu-4K-w6k"/>
+                            <constraint firstItem="5AT-gp-s2b" firstAttribute="top" secondItem="LLm-BH-Srz" secondAttribute="top" constant="483" id="Qoz-AL-AVg"/>
+                            <constraint firstItem="5AT-gp-s2b" firstAttribute="leading" secondItem="LLm-BH-Srz" secondAttribute="leading" constant="43" id="hqN-la-NLJ"/>
+                            <constraint firstItem="LLm-BH-Srz" firstAttribute="bottom" secondItem="5AT-gp-s2b" secondAttribute="bottom" constant="106" id="nwK-tv-wcN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LLm-BH-Srz"/>
+                    </view>
+                    <connections>
+                        <outlet property="materialList" destination="rGu-sQ-88c" id="zEw-XC-Dv4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Um-w9-JjU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1430" y="-435"/>
         </scene>
     </scenes>
     <resources>
         <image name="clock" catalog="system" width="64" height="60"/>
         <image name="gear" catalog="system" width="64" height="58"/>
+        <image name="paintbrush.fill" catalog="system" width="64" height="62"/>
         <image name="person.3.fill" catalog="system" width="71" height="34"/>
         <image name="star.fill" catalog="system" width="64" height="58"/>
+        <image name="xmark" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="gkj-OS-5b5"/>

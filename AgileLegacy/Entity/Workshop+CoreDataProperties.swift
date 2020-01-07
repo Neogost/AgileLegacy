@@ -29,24 +29,12 @@ extension Workshop {
     @NSManaged public var source: String?
     @NSManaged public var title: String?
     @NSManaged public var type: String?
-    @NSManaged public var materialList: NSSet?
+    @NSManaged public var materialList: String?
 
 }
 
 // MARK: Generated accessors for materialList
 extension Workshop {
-
-    @objc(addMaterialListObject:)
-    @NSManaged public func addToMaterialList(_ value: Material)
-
-    @objc(removeMaterialListObject:)
-    @NSManaged public func removeFromMaterialList(_ value: Material)
-
-    @objc(addMaterialList:)
-    @NSManaged public func addToMaterialList(_ values: NSSet)
-
-    @objc(removeMaterialList:)
-    @NSManaged public func removeFromMaterialList(_ values: NSSet)
 
     
 }

@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         preloadedData()
+        
+        // Mise a jour de l'application, version du build : V1.02
+        maj102()
         return true
     }
 
@@ -56,6 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Si les données ne sont pas encore initialisé
         if userDefaults.bool(forKey: preloadedDataKey) == false {
+            print("Exécution de la mise à jour 1.00")
             
             // Récupération des données à chargé dans le fichier des data preloadedData.plist
             guard let urlPath = Bundle.main.url(forResource: "preloadedData", withExtension: "plist") else {
@@ -70,7 +74,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
                 // récupération des données dans le fichier .plist
                 // Extraction des objets métiers
-                if let datas = NSArray(contentsOf: urlPath) as? [Dictionary<String,String>] {
+                if let datas = NSArray(contentsOf: urlPath) as? [Dictionary<String,AnyObject>] {
                     
                     do {
                         for workshopList in datas {
@@ -79,41 +83,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                 
                                 switch(key) {
                                 case "id":
-                                   workshopObject.id = UUID(uuidString: value)
+                                   workshopObject.id = UUID(uuidString: value as! String)
                                     break
                                 
                                 case "nbPeopleMax":
-                                    workshopObject.nbPeopleMax = Int16(value)!
+                                    workshopObject.nbPeopleMax = Int16(truncating: value as! NSNumber)
                                     break;
                                 case "nbPeopleMin":
-                                    workshopObject.nbPeopleMin = Int16(value)!
+                                    workshopObject.nbPeopleMin = Int16(truncating: value as! NSNumber)
                                     break;
                                 case "title":
-                                    workshopObject.title = value
+                                    workshopObject.title = value as? String
                                     break
                                 case "resume":
-                                    workshopObject.resume = value
+                                    workshopObject.resume = value as? String
                                     break
                                 case "detail":
-                                    workshopObject.detail = value
+                                    workshopObject.detail = value as? String
                                     break
                                 case "source":
-                                    workshopObject.source = value
+                                    workshopObject.source = value as? String
                                     break
                                 case "durationMax":
-                                    workshopObject.durationMax = Int16(value)!
+                                    workshopObject.durationMax = Int16(truncating: value as! NSNumber)
                                     break
                                 case "durationMin":
-                                    workshopObject.durationMin = Int16(value)!
+                                    workshopObject.durationMin = Int16(truncating: value as! NSNumber)
                                     break
                                 case "type":
-                                    workshopObject.type = value
+                                    workshopObject.type = value as? String
                                     break
                                 case "archived":
-                                    workshopObject.archived = value.bool!
+                                    workshopObject.archived = value.boolValue
                                     break
                                 case "difficulty":
-                                    workshopObject.difficulty = Int16(value)!
+                                    workshopObject.difficulty = Int16(truncating: value as! NSNumber)
+                                    break
+                                case "materiel":
+                                    workshopObject.materialList = value as? String
                                     break
                                 default:
                                     break
@@ -127,6 +134,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         
                         // Mise à jour du paramettre de préchargement des données à true
                         userDefaults.set(true, forKey: preloadedDataKey)
+                        userDefaults.set(true, forKey: "maj102")
                     } catch {
                         print("Error : " + error.localizedDescription)
                     }
@@ -135,11 +143,53 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             
         } else {
-            print("DATA IS ALREADY BEEN IMPORTED THERE IS NOTHING MORE TO DO HERE.")
+            print("Non exécution de la mise en base des données par défaut")
         }
     }
-    
+
+    /// Initialisation des données de l'applicaiton suite à la mise en place de la version de l'application en V1.02. Dans celle-ci est inclu les modifications suivantes sur les données :
+    private func maj102() {
+        let userDefaults = UserDefaults.standard
+        
+        // Parametre d'import des données préinitialiser
+        let preloadedDataKey = "didPreloadData"
+        
+        // Parametre d'import des mises a jour effectué sous le tag V1.02
+        let maj102Parameter = "maj102"
+        
+        if userDefaults.bool(forKey: preloadedDataKey) == true && userDefaults.bool(forKey: maj102Parameter) == false{
+            print("Exécution de la mise à jour 1.02")
+            // Suppression des données dans la bases de données
+            let managedContext = PersistanceService.persistentContainer.viewContext
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Workshop")
+            fetchRequest.returnsObjectsAsFaults = false
+
+            do
+            {
+                let results = try managedContext.fetch(fetchRequest)
+                for managedObject in results
+                {
+                    let managedObjectData:NSManagedObject = managedObject as! NSManagedObject
+                    managedContext.delete(managedObjectData)
+                }
+            } catch let error as NSError {
+                print("Detele all data in \(Workshop()) error : \(error) \(error.userInfo)")
+            }
+            
+            // remise à zero du tag didPreloadData
+
+            userDefaults.set(false, forKey: preloadedDataKey)
+            // Initialisation du tag maj102 à appliqué
+            userDefaults.set(true, forKey: maj102Parameter)
+            
+            // réexécution de didPreloadData
+            preloadedData();
+        } else {
+            print("Non exécution de la mise à jour 1.02")
+        }
+    }
 }
+
 
 
 extension String {

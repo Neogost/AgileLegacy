@@ -87,6 +87,16 @@ class DetailScreen: UIViewController {
         }
     }
     
+    /// Affichage de la modale de matériel pour l'atelier
+    @IBAction func showMaterialPopup(_ sender: UIButton) {
+        
+        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "materialPopupScreen") as! MaterialPopupScreen
+        popOverVC.call(entity: workshop)
+        self.addChild(popOverVC)
+        popOverVC.view.frame = self.view.frame
+        self.view.addSubview(popOverVC.view)
+        popOverVC.didMove(toParent: self)
+    }
     
 }
 

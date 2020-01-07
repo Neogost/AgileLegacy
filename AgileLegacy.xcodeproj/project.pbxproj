@@ -19,6 +19,7 @@
 		F11F72A1232D91C900F11B46 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11F72A0232D91C900F11B46 /* Extension.swift */; };
 		F11F72AB232DA00100F11B46 /* PersistanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11F72AA232DA00100F11B46 /* PersistanceService.swift */; };
 		F1209A8D2340AFD0004E09C3 /* AProposScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1209A8C2340AFD0004E09C3 /* AProposScreen.swift */; };
+		F133973D23C512FA0050A692 /* MaterialPopupScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F133973C23C512F90050A692 /* MaterialPopupScreen.swift */; };
 		F13B8D4A2332CB00000EA7EF /* Workshop+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13B8D462332CB00000EA7EF /* Workshop+CoreDataClass.swift */; };
 		F13B8D4B2332CB00000EA7EF /* Workshop+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13B8D472332CB00000EA7EF /* Workshop+CoreDataProperties.swift */; };
 		F13B8D4C2332CB00000EA7EF /* Material+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13B8D482332CB00000EA7EF /* Material+CoreDataClass.swift */; };
@@ -65,6 +66,7 @@
 		F11F72A0232D91C900F11B46 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		F11F72AA232DA00100F11B46 /* PersistanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceService.swift; sourceTree = "<group>"; };
 		F1209A8C2340AFD0004E09C3 /* AProposScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AProposScreen.swift; sourceTree = "<group>"; };
+		F133973C23C512F90050A692 /* MaterialPopupScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialPopupScreen.swift; sourceTree = "<group>"; };
 		F1354E27233290E2004BF818 /* AgileLegacy 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "AgileLegacy 2.xcdatamodel"; sourceTree = "<group>"; };
 		F13B8D462332CB00000EA7EF /* Workshop+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workshop+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F13B8D472332CB00000EA7EF /* Workshop+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workshop+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				F1209A8C2340AFD0004E09C3 /* AProposScreen.swift */,
 				F173F3BA2365C810003D8E24 /* SettingScreen.swift */,
 				F173F3BC2365DE45003D8E24 /* ContactScreen.swift */,
+				F133973C23C512F90050A692 /* MaterialPopupScreen.swift */,
 			);
 			path = viewController;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				F11F72AB232DA00100F11B46 /* PersistanceService.swift in Sources */,
 				F13B8D4A2332CB00000EA7EF /* Workshop+CoreDataClass.swift in Sources */,
 				F11F729F232D917600F11B46 /* ListScreen.swift in Sources */,
+				F133973D23C512FA0050A692 /* MaterialPopupScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +528,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.01;
 				PRODUCT_BUNDLE_IDENTIFIER = fr.agile.AgileLegacy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -542,6 +547,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.01;
 				PRODUCT_BUNDLE_IDENTIFIER = fr.agile.AgileLegacy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
